@@ -8,6 +8,8 @@ RUN pip install python-dateutil>=2.1 pycocotools>=2.0.1
 
 RUN pip install opencv-python ipython scipy scikit-image
 
+RUN apt-get -y update
+
 RUN apt-get install git -y
 
 RUN apt-get install vim -y
