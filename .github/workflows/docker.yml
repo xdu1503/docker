@@ -22,5 +22,5 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           push: true
-          tags: ${ycchen}:${{ env.RELEASE_VERSION }-torch19-cudnn11-tunapipy}
+          tags: ${ycchen}:${{ env.RELEASE_VERSION -torch19-cudnn11-tunapipy}}
 
