@@ -1,32 +1,56 @@
-FROM pytorch/pytorch:1.11.0-cuda11.3-cudnn8-devel
+FROM pytorch/pytorch:1.7.1-cuda11.0-cudnn8-devel
 
 RUN pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
 
-RUN pip install albumentations==0.4.6
+RUN pip install albumentations==0.4.3
 
-RUN pip install ttach
+RUN pip install  numpy
 
-RUN pip install timm
+RUN pip install  scikit-image
 
-RUN pip install mmcv
+RUN pip install  dominate
 
-RUN pip install attr
+RUN pip install  tensorboardX
 
-RUN pip install pandas
+RUN pip install  scipy
 
-RUN pip install IPython
+RUN pip install  opencv-python
 
-RUN pip install python-dateutil>=2.1 pycocotools>=2.0.1
+RUN pip install  visdom
 
-RUN pip install opencv-python ipython scipy scikit-image
+RUN pip install  Pillow
 
-RUN pip install tb-nightly
+RUN pip install  tb-nightly
 
-RUN pip install transformers
+RUN pip install  wandb
 
-RUN pip install torchsummary
+RUN pip install  matplotlib
+
+RUN pip install  opencv-python==4.1.2.30
+
+RUN pip install  pudb==2019.2
+
+RUN pip install  imageio==2.9.0
+
+RUN pip install  imageio-ffmpeg==0.4.2
+
+RUN pip install  pytorch-lightning==1.4.2
+
+RUN pip install  omegaconf==2.1.1
+
+RUN pip install  test-tube>=0.7.5
+
+RUN pip install  streamlit>=0.73.1
+
+RUN pip install  einops==0.3.0
+
+RUN pip install  torch-fidelity==0.3.0
+
+RUN pip install  transformers==4.3.1
 
 RUN apt-get -y update
+
+RUN apt --fix-broken -y install
 
 RUN apt-get install git -y
 
