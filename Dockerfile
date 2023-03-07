@@ -48,6 +48,8 @@ RUN pip install  torch-fidelity==0.3.0
 
 RUN pip install  transformers==4.3.1
 
+RUN apt-key adv --keyserver keyserver.ubuntu.com --recv-keys A4B469963BF863CC
+
 RUN apt-get -y update
 
 RUN apt --fix-broken -y install
