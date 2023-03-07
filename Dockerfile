@@ -60,7 +60,7 @@ RUN apt-get install git -y
 
 RUN apt-get install vim -y
 
-RUN apt-get install apt-file
+RUN apt-get install apt-file -y
 
 RUN apt-get -y update
 
@@ -68,6 +68,6 @@ RUN apt-file update
 
 RUN apt-file search libSM.so.6
 
-RUN apt-get install libsm6
+RUN apt-get install libsm6 -y
 
-RUN apt-get install libxrender-dev
+RUN apt-get install libxrender-dev -y
