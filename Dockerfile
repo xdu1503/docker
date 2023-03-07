@@ -50,6 +50,8 @@ RUN pip install  torchmetrics==0.5.0
 
 RUN pip install  kornia==0.5.0
 
+RUN pip install  ftfy
+
 RUN apt-key adv --keyserver keyserver.ubuntu.com --recv-keys A4B469963BF863CC
 
 RUN apt-get -y update
