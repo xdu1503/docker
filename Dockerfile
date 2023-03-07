@@ -46,6 +46,10 @@ RUN pip install  torch-fidelity==0.3.0
 
 RUN pip install  transformers==4.3.1
 
+RUN pip install  torchmetrics==0.5.0
+
+RUN pip install  kornia==0.5.0
+
 RUN apt-key adv --keyserver keyserver.ubuntu.com --recv-keys A4B469963BF863CC
 
 RUN apt-get -y update
@@ -55,3 +59,15 @@ RUN apt --fix-broken -y install
 RUN apt-get install git -y
 
 RUN apt-get install vim -y
+
+RUN apt-get install apt-file
+
+RUN apt-get -y update
+
+RUN apt-file update
+
+RUN apt-file search libSM.so.6
+
+RUN apt-get install libsm6
+
+RUN apt-get install libxrender-dev
